@@ -22,7 +22,7 @@
       }
 
       .left {
-        align-items: left;
+        align-self: left;
       }
 
       .hide {
@@ -121,16 +121,6 @@
         align-items: center;
         justify-content: space-between;
       }
-
-      .evenly-spaced {
-        display: flex;
-        flex: 1;
-        justify-content: left;
-        flex-direction: column;
-        max-width: 50%;
-        margin: 5px;
-      }
-
       .user {
         font-weight: bold;
         text-align: left;
@@ -361,7 +351,7 @@
         <h1 class="main-header" id="prototype">Prototype</h1>
         <div class="section-title">Sketches</div>
         <div class="section-container">
-          <div class="flex-container">
+          <div>
             <p>
               Designs range from simple interventions to existing masks to
               creative manifestations of ideas from our ideate phase.
@@ -377,7 +367,7 @@
             </p>
           </div>
 
-          <img src=img/sketches.png alt="" class="evenly-spaced">
+          <img src=img/sketches.png alt="" style="max-width: 50%;">
         </div>
       </div>
     </div>
