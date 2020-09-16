@@ -17,6 +17,10 @@
     />
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       .left {
         align-items: left;
       }
@@ -35,32 +39,29 @@
 
       ul {
         list-style: none;
+        padding-left: 10px;
       }
 
-      ul li::before {
+      ul li.green::before {
         content: "\2022";
         color: #91d0b6;
         display: inline-block;
         width: 1em;
       }
-
-      .li-nav {
-        list-style: none;
-      }
-
       ol {
         list-style: none;
         counter-reset: li;
+        padding-left: 10px;
       }
 
-      ol li::before {
+      ol li.green::before {
         content: counter(li);
         color: #91d0b6;
         display: inline-block;
         width: 1em;
       }
 
-      li {
+      li.green {
         counter-increment: li;
       }
 
@@ -110,10 +111,10 @@
       .section-title {
         font-weight: bold;
         text-align: left;
+        font-size: 20px;
       }
 
       .section-container {
-        background-color: lightgray;
         display: flex;
         flex-direction: row;
         margin-top: 10px;
@@ -169,22 +170,25 @@
           <li class="nav-item">
             <a class="nav-link" href="#prototype">Prototype</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#test">Test</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <div class="jumbotron">
-      <h1 class="display-4">We Made a Mask!</h1>
-      <p class="lead">
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
-      <hr class="my-4" />
+      <h1 class="main-header">Untitled Mask</h1>
+      <div class="section-title">Description</div>
+      <div class="section-title">Team</div>
       <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
+        Hannah Hetzer<br />
+        Karen Lin<br />
+        Pazit Schrecker<br />
+        Paul Berthe<br />
+        Ramisa Murshed<br />
+        Scarlet Tong<br />
       </p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
     <div class="outer-container">
@@ -197,7 +201,8 @@
 
       <!-- Challenge Section-->
       <div class="flex-container">
-        <p class="section-title">Challenge</p>
+        <div class="section-title">Challenge</div>
+
         <div class="section-container">
           <div>
             Wearing a mask during COVID is the best and easiest way to protect
@@ -220,7 +225,8 @@
 
       <!-- Process Section-->
       <div class="flex-container">
-        <p class="section-title">Process</p>
+        <div class="section-title">Process</div>
+
         <img src=img/flow.png alt="Map of design process">
       </div>
     </div>
@@ -232,7 +238,7 @@
 
       <!-- Competitive Analysis Section-->
       <div class="flex-container">
-        <p class="section-title">Competitive Analysis</p>
+        <div class="section-title">Competitive Analysis</div>
         <img src=img/mask.png alt="Map of design process">
       </div>
 
@@ -242,7 +248,7 @@
 
       <!-- User Interviews Section-->
       <div class="flex-container">
-        <p class="section-title">User Interviews</p>
+        <div class="section-title">User Interviews</div>
         <div class="section-container">
           <div class="evenly-spaced">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -284,7 +290,7 @@
 
       <!-- User Journey -->
       <div class="flex-container">
-        <p class="section-title">User Journey Map</p>
+        <div class="section-title">User Journey Map</div>
         <img src=img/userjourney.png alt="User Journey Map" class="img-fluid">
       </div>
     </div>
@@ -295,30 +301,40 @@
       </div>
 
       <div class="flex-container">
-        <p class="section-title">Insights</p>
+        <div class="section-title">Insights</div>
         <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li class="green">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li class="green">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li class="green">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li class="green">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li class="green">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
         </ul>
       </div>
 
       <div class="flex-container">
-        <p class="section-title">Reframing User Needs</p>
+        <div class="section-title">Reframing User Needs</div>
         <ol>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
+          <li class="green">Coffee</li>
+          <li class="green">Tea</li>
+          <li class="green">Milk</li>
         </ol>
       </div>
     </div>
 
     <div class="outer-container">
       <div class="flex-container">
-        <h1 class="main-header">Ideate</h1>
-        <p class="section-title">Brainstorming</p>
+        <h1 class="main-header" id="ideate">Ideate</h1>
+        <div class="section-title">Brainstorming</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -342,8 +358,8 @@
 
     <div class="outer-container">
       <div class="flex-container">
-        <h1 class="main-header">Prototype</h1>
-        <p class="section-title">Sketches</p>
+        <h1 class="main-header" id="prototype">Prototype</h1>
+        <div class="section-title">Sketches</div>
         <div class="section-container">
           <div class="flex-container">
             <p>
@@ -363,6 +379,41 @@
 
           <img src=img/sketches.png alt="" class="evenly-spaced">
         </div>
+      </div>
+    </div>
+
+    <div class="outer-container">
+      <div class="flex-container">
+        <h1 class="main-header" id="test">Test</h1>
+        <img src=img/mask.png alt="">
+      </div>
+      <div class="flex-container">
+        <div class="section-title">Finalize</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
+
+      <div class="flex-container">
+        <div class="section-title">Solution</div>
+        <h1 class="main-header">
+          Design a COVID mask that people want to wear
+        </h1>
       </div>
     </div>
   </body>
