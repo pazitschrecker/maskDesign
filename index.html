@@ -44,6 +44,10 @@
         width: 1em;
       }
 
+      .li-nav {
+        list-style: none;
+      }
+
       ol {
         list-style: none;
         counter-reset: li;
@@ -75,15 +79,25 @@
         }
       }
 
+      .outer-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 60px;
+        text-align: left;
+      }
+
       .flex-container {
-        background-color: lightgray;
         display: flex;
         flex-direction: column;
         padding-left: 6px;
         padding-right: 6px;
         margin-left: 10px;
         margin-right: 10px;
-        margin-top: 100px;
+        margin-top: 40px;
         text-align: left;
       }
 
@@ -103,13 +117,17 @@
         display: flex;
         flex-direction: row;
         margin-top: 10px;
+        align-items: center;
+        justify-content: space-between;
       }
 
       .evenly-spaced {
         display: flex;
         flex: 1;
         justify-content: left;
-        max-width: 40%;
+        flex-direction: column;
+        max-width: 50%;
+        margin: 5px;
       }
 
       .user {
@@ -139,19 +157,17 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+          <li class="nav-item">
+            <a class="nav-link" href="#research">Research</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Section 1</a>
+            <a class="nav-link" href="#synthesis">Synthesis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Section 2</a>
+            <a class="nav-link" href="#ideate">Ideate</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Section 3</a>
+            <a class="nav-link" href="#prototype">Prototype</a>
           </li>
         </ul>
       </div>
@@ -171,170 +187,182 @@
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
-    <div class="flex-container">
-      <div class="section-title">Goal</div>
-      <h1 class="main-header">Design a COVID mask that people want to wear</h1>
-    </div>
+    <div class="outer-container">
+      <div class="flex-container">
+        <div class="section-title">Goal</div>
+        <h1 class="main-header">
+          Design a COVID mask that people want to wear
+        </h1>
+      </div>
 
-    <!-- Challenge Section-->
-    <div class="flex-container">
-      <p class="section-title">Challenge</p>
-      <div class="section-container">
-        <div>
-          Wearing a mask during COVID is the best and easiest way to protect
-          yourself and others during the pandemic. And yet, this practice is far
-          from universal.<br /><br />
-          One reason is that masks are uncomfortable, unsuitable, restrictive or
-          otherwise undesirable to wear in public. (We are currently not
-          addressing the challenge of people who believe that masks don’t keep
-          you safe).<br /><br />
-          Designs a mask (or mask enhancement) that will encourage at least 5
-          more people to wear their mask more, and has comparable safety to
-          existing masks.<br />
+      <!-- Challenge Section-->
+      <div class="flex-container">
+        <p class="section-title">Challenge</p>
+        <div class="section-container">
+          <div>
+            Wearing a mask during COVID is the best and easiest way to protect
+            yourself and others during the pandemic. And yet, this practice is
+            far from universal.<br /><br />
+            One reason is that masks are uncomfortable, unsuitable, restrictive
+            or otherwise undesirable to wear in public. (We are currently not
+            addressing the challenge of people who believe that masks don’t keep
+            you safe).<br /><br />
+            Designs a mask (or mask enhancement) that will encourage at least 5
+            more people to wear their mask more, and has comparable safety to
+            existing masks.<br />
+          </div>
+          <div>
+            <img src=img/mask.png alt="Image of disposable covid mask with light
+            green background">
+          </div>
         </div>
-        <div>
-          <img src=img/mask.png alt="Image of disposable covid mask with light
-          green background">
-        </div>
+      </div>
+
+      <!-- Process Section-->
+      <div class="flex-container">
+        <p class="section-title">Process</p>
+        <img src=img/flow.png alt="Map of design process">
       </div>
     </div>
 
-    <!-- Process Section-->
-    <div class="flex-container">
-      <p class="section-title">Process</p>
-      <img src=img/flow.png alt="Map of design process">
-    </div>
+    <div class="outer-container">
+      <div class="flex-container">
+        <h1 class="main-header" id="research">Research</h1>
+      </div>
 
-    <div class="flex-container">
-      <h1 class="main-header">Research</h1>
-    </div>
+      <!-- Competitive Analysis Section-->
+      <div class="flex-container">
+        <p class="section-title">Competitive Analysis</p>
+        <img src=img/mask.png alt="Map of design process">
+      </div>
 
-    <!-- Competitive Analysis Section-->
-    <div class="flex-container">
-      <p class="section-title">Competitive Analysis</p>
-      <img src=img/mask.png alt="Map of design process">
-    </div>
+      <div class="flex-container">
+        <h1 class="main-header">Engagement</h1>
+      </div>
 
-    <div class="flex-container">
-      <h1 class="main-header">Engagement</h1>
-    </div>
-
-    <!-- User Interviews Section-->
-    <div class="flex-container">
-      <p class="section-title">User Interviews</p>
-      <div class="section-container">
-        <div>
-          <p>
+      <!-- User Interviews Section-->
+      <div class="flex-container">
+        <p class="section-title">User Interviews</p>
+        <div class="section-container">
+          <div class="evenly-spaced">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="user">-User 1</p>
+            culpa qui officia deserunt mollit anim id est laborum.<br />
+            <br />
+            <p class="user">-User 1</p>
+          </div>
+          <div class="evenly-spaced">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="user">-User 2</p>
+          </div>
+          <div class="evenly-spaced">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="user">-User 3</p>
+          </div>
         </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="user">-User 2</p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p class="user">-User 3</p>
-        </div>
+      </div>
+
+      <!-- User Journey -->
+      <div class="flex-container">
+        <p class="section-title">User Journey Map</p>
+        <img src=img/userjourney.png alt="User Journey Map" class="img-fluid">
       </div>
     </div>
 
-    <!-- User Journey -->
-    <div class="flex-container">
-      <p class="section-title">User Journey Map</p>
-      <img src=img/userjourney.png alt="User Journey Map">
+    <div class="outer-container">
+      <div class="flex-container">
+        <h1 class="main-header" id="synthesis">Synthesis</h1>
+      </div>
+
+      <div class="flex-container">
+        <p class="section-title">Insights</p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </div>
+
+      <div class="flex-container">
+        <p class="section-title">Reframing User Needs</p>
+        <ol>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+      </div>
     </div>
 
-    <div class="flex-container">
-      <h1 class="main-header">Synthesis</h1>
+    <div class="outer-container">
+      <div class="flex-container">
+        <h1 class="main-header">Ideate</h1>
+        <p class="section-title">Brainstorming</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
     </div>
 
-    <div class="flex-container">
-      <p class="section-title">Insights</p>
-      <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      </ul>
-    </div>
+    <div class="outer-container">
+      <div class="flex-container">
+        <h1 class="main-header">Prototype</h1>
+        <p class="section-title">Sketches</p>
+        <div class="section-container">
+          <div class="flex-container">
+            <p>
+              Designs range from simple interventions to existing masks to
+              creative manifestations of ideas from our ideate phase.
+            </p>
+            <p>
+              There is heavy use of clear material in most of the designs, as
+              the visual cue of facial expressions aid in both verbal and
+              non-verbal communication.
+            </p>
+            <p>
+              Latter designs combine E-textile technology and mics to enhance
+              the communicative tasks wearers will undergo.
+            </p>
+          </div>
 
-    <div class="flex-container">
-      <p class="section-title">Reframing User Needs</p>
-      <ol>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-      </ol>
-    </div>
-
-    <div class="flex-container">
-      <h1 class="main-header">Ideate</h1>
-      <p class="section-title">Brainstorming</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-      <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-
-    <div class="flex-container">
-      <h1 class="main-header">Prototype</h1>
-      <p class="section-title">Sketches</p>
-      <div class="section-container">
-        <div class="flex-container">
-          <p>
-            Designs range from simple interventions to existing masks to
-            creative manifestations of ideas from our ideate phase.
-          </p>
-          <p>
-            There is heavy use of clear material in most of the designs, as the
-            visual cue of facial expressions aid in both verbal and non-verbal
-            communication.
-          </p>
-          <p>
-            Latter designs combine E-textile technology and mics to enhance the
-            communicative tasks wearers will undergo.
-          </p>
+          <img src=img/sketches.png alt="" class="evenly-spaced">
         </div>
-
-        <img src=img/sketches.png alt="" class="evenly-spaced">
       </div>
     </div>
   </body>
