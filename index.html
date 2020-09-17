@@ -15,6 +15,8 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
 
     <style>
       html {
@@ -34,7 +36,7 @@
       }
 
       body {
-        font-family: "Times New Roman", Times, serif;
+        font-family: 'Lato', sans-serif;
       }
 
       ul {
@@ -80,24 +82,24 @@
         }
       }
 
-      .outer-container {
+      /*.outer-container {
         display: flex;
         flex-direction: column;
         padding-left: 6px;
         padding-right: 6px;
-        margin-left: 140px;
-        margin-right: 140px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 60px;
         text-align: left;
-      }
+      }*/
 
-      .flex-container {
+      .row {
         display: flex;
         flex-direction: column;
         padding-left: 6px;
         padding-right: 6px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 40px;
         text-align: left;
       }
@@ -106,12 +108,19 @@
         color: #91d0b6;
         font-weight: bold;
         text-align: left;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        margin-bottom: 15px;
       }
 
       .section-title {
         font-weight: bold;
         text-align: left;
-        font-size: 20px;
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 15px;
       }
 
       .section-container {
@@ -124,7 +133,31 @@
       .user {
         font-weight: bold;
         text-align: left;
-        margin-top: 10px;
+        margin-top: auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #d3d3d3;
+        font-size: 15px;
+        text-transform: uppercase;
+
+      }
+    
+      hr {
+        margin-top: 100px;
+        padding-bottom: 40px;
+      }
+
+      .container {
+        margin-bottom: 50px;
+      }
+
+      .navbar {
+        background-color: white;
+      }
+
+      #title {
+        font-size: 60px;
+        margin-bottom: 0px;
       }
     </style>
   </head>
@@ -132,7 +165,7 @@
   <body>
     <!-- adapted from code on https://getbootstrap.com/docs/4.0/components/navbar/ -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -155,6 +188,9 @@
             <a class="nav-link" href="#synthesis">Synthesis</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#engagement">Engagement</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#ideate">Ideate</a>
           </li>
           <li class="nav-item">
@@ -167,34 +203,67 @@
       </div>
     </nav>
 
-    <div class="jumbotron">
-      <h1 class="main-header">Untitled Mask</h1>
-      <div class="section-title">Description</div>
-      <div class="section-title">Team</div>
-      <p>
-        Hannah Hetzer<br />
-        Karen Lin<br />
-        Pazit Schrecker<br />
-        Paul Berthe<br />
-        Ramisa Murshed<br />
-        Scarlet Tong<br />
-      </p>
-    </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="main-header" id="title">Untitled Mask</h1>
+          </div>
+        </div>
 
-    <div class="outer-container">
-      <div class="flex-container">
-        <div class="section-title">Goal</div>
-        <h1 class="main-header">
-          Design a COVID mask that people want to wear
-        </h1>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">Description</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">Team</div>
+            <p>
+              Hannah Hetzer<br />
+              Karen Lin<br />
+              Pazit Schrecker<br />
+              Paul Berthe<br />
+              Ramisa Murshed<br />
+              Scarlet Tong<br />
+            </p>
+          </div>
+        </div>
+
+    <hr>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Goal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header">
+              Design a COVID mask that people want to wear.
+            </h1>
+          </div>
+        </div>
       </div>
 
       <!-- Challenge Section-->
-      <div class="flex-container">
-        <div class="section-title">Challenge</div>
-
+      <div class="row">
         <div class="section-container">
-          <div>
+          <div class="col-md-12">
+            <div class="section-title">Challenge</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-6">
             Wearing a mask during COVID is the best and easiest way to protect
             yourself and others during the pandemic. And yet, this practice is
             far from universal.<br /><br />
@@ -206,52 +275,93 @@
             more people to wear their mask more, and has comparable safety to
             existing masks.<br />
           </div>
-          <div>
+          <div class="col-md-6">
             <img src=img/mask.png alt="Image of disposable covid mask with light
-            green background">
+              green background">
+          </div>
+        </div>
+        </div>
+      
+
+      <!-- Process Section-->
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Design Process</div>
           </div>
         </div>
       </div>
 
-      <!-- Process Section-->
-      <div class="flex-container">
-        <div class="section-title">Process</div>
-
-        <img src=img/flow.png alt="Map of design process">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <img src=img/flow.png alt="Map of design process">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="outer-container">
-      <div class="flex-container">
-        <h1 class="main-header" id="research">Research</h1>
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="research">Research</h1>
+          </div>
+        </div>
       </div>
 
       <!-- Competitive Analysis Section-->
-      <div class="flex-container">
-        <div class="section-title">Competitive Analysis</div>
-        <img src=img/mask.png alt="Map of design process">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Competitive Analysis</div>
+          </div>
+        </div>
       </div>
 
-      <div class="flex-container">
-        <h1 class="main-header">Engagement</h1>
+      <div class="row">
+        <div class="section-container">
+          <div class=col-md-12>
+            <img src=img/mask.png alt="Map of design process">
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="engagement">Engagement</h1>
+          </div>
+        </div>
       </div>
 
       <!-- User Interviews Section-->
-      <div class="flex-container">
-        <div class="section-title">User Interviews</div>
+      <div class="row">
         <div class="section-container">
-          <div class="evenly-spaced">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <div class="col-md-12">
+            <div class="section-title">User Interviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.<br />
-            <br />
-            <p class="user">-User 1</p>
+            culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="user">User 1</p>
           </div>
-          <div class="evenly-spaced">
+          <div class="col-md-4">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -261,9 +371,9 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p class="user">-User 2</p>
+            <p class="user">User 2</p>
           </div>
-          <div class="evenly-spaced">
+          <div class="col-md-4">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -273,85 +383,151 @@
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p class="user">-User 3</p>
+            <p class="user">User 3</p>
           </div>
         </div>
       </div>
 
       <!-- User Journey -->
-      <div class="flex-container">
-        <div class="section-title">User Journey Map</div>
-        <img src=img/userjourney.png alt="User Journey Map" class="img-fluid">
-      </div>
-    </div>
-
-    <div class="outer-container">
-      <div class="flex-container">
-        <h1 class="main-header" id="synthesis">Synthesis</h1>
-      </div>
-
-      <div class="flex-container">
-        <div class="section-title">Insights</div>
-        <ul>
-          <li class="green">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li class="green">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li class="green">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li class="green">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li class="green">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex-container">
-        <div class="section-title">Reframing User Needs</div>
-        <ol>
-          <li class="green">Coffee</li>
-          <li class="green">Tea</li>
-          <li class="green">Milk</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="outer-container">
-      <div class="flex-container">
-        <h1 class="main-header" id="ideate">Ideate</h1>
-        <div class="section-title">Brainstorming</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
-      </div>
-    </div>
-
-    <div class="outer-container">
-      <div class="flex-container">
-        <h1 class="main-header" id="prototype">Prototype</h1>
-        <div class="section-title">Sketches</div>
+      <div class="row">
         <div class="section-container">
-          <div>
+          <div class="col-md-12">
+            <img src=img/userjourney.png alt="User Journey Map" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="synthesis">Synthesis</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Insights</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <ul>
+              <li class="green">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="green">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="green">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="green">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+              <li class="green">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Reframing User Needs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <ol>
+              <li class="green">Coffee</li>
+              <li class="green">Tea</li>
+              <li class="green">Milk</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="ideate">Ideate</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Brainstorming</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="prototype">Prototype</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Sketches</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-6">
             <p>
               Designs range from simple interventions to existing masks to
               creative manifestations of ideas from our ideate phase.
@@ -366,44 +542,82 @@
               the communicative tasks wearers will undergo.
             </p>
           </div>
-
-          <img src=img/sketches.png alt="" style="max-width: 50%;">
+          <div class="col-md-6">
+            <img src=img/sketches.png alt="Sketches of mask designs" style="max-width: 100%;">
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="outer-container">
-      <div class="flex-container">
-        <h1 class="main-header" id="test">Test</h1>
-        <img src=img/mask.png alt="">
-      </div>
-      <div class="flex-container">
-        <div class="section-title">Finalize</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header" id="test">Test</h1>
+          </div>
+        </div>
       </div>
 
-      <div class="flex-container">
-        <div class="section-title">Solution</div>
-        <h1 class="main-header">
-          Design a COVID mask that people want to wear
-        </h1>
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <img src=img/mask.png alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="section-container">
+        <div class="col-md-12">
+          <div class="section-title">Finalize</div>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <div class="section-title">Solution</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="section-container">
+          <div class="col-md-12">
+            <h1 class="main-header">
+              Design a COVID mask that people want to wear.
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </body>
